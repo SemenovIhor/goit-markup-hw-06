@@ -405,6 +405,7 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: #FFFFFF;
     background: rgba(47, 48, 58, 0.8);
 }
@@ -694,6 +695,10 @@ body {
     padding: 0px;
     margin: 0px;
 
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
     color: var(--primary-white-color);
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -916,8 +921,15 @@ body {
     justify-content: center;
 
     cursor: pointer;
+
+    transition: fill 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-btn-close:hover {
+    fill: var(--accent-color);
+
+}
 
 .backdrop.is-hidden {
     opacity: 0;
@@ -943,7 +955,6 @@ body {
 
     outline: none;
 
-    margin-top: 4px;
     padding-left: 42px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -998,15 +1009,8 @@ body {
     padding-right: 16px;
     padding-top: 12px;
     padding-bottom: 12px;
+    margin-top: 4px;
     margin-bottom: 20px;
-}
-
-.checkbox {
-    line-height: 1.71;
-
-    letter-spacing: 0.03em;
-
-    color: #757575;
 }
 
 
@@ -1015,10 +1019,10 @@ body {
     align-items: center;
     gap: 7px;
     margin-bottom: 30px;
-    font-size: 12px;
+
+    font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-
     color: #757575;
 
     user-select: none;
@@ -1026,11 +1030,15 @@ body {
 
 .label-icon {
     position: absolute;
-
-    bottom: 11px;
-    left: 12px;  
-
+    margin-left: 12px;
     fill: var(--header-logo);
+}
+
+.label-icon-possichion{
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+
 }
 
 .agreement-icon-check {
@@ -1057,3 +1065,6 @@ body {
     margin: -1px;
 }
 
+.agreement-link {
+    color: var(--accent-color);
+}
